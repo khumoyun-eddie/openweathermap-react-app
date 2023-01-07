@@ -24,13 +24,13 @@ const Inputs = ({setQuery, units, setUnits}) => {
     if(units !== selectedUnit) setUnits(selectedUnit)
   }
   return (
-    <div className='flex flex-row justify-center my-6'>
-        <div className='flex flex-row w-3/4 items-center justify-center space-x-4'>
+    <div className='flex flex-row flex-wrap justify-center my-6 space-y-2'>
+        <div className='flex flex-row w-full md:w-3/4 items-center justify-center space-x-4'>
             <input type="text" className='text-xl font-light p-2 focus:outline-none w-full shadow-xl capitalize placeholder:lowercase' placeholder='Search for city...' value={city} onChange={(e)=> setCity(e.target.value)} />
             <UilSearch size={25} className="text-white cursor-pointer transition ease-out hover:scale-125 duration-100" onClick={handleSearchClick} />
             <UilLocationPoint size={25} className="text-white cursor-pointer transition ease-out hover:scale-125 duration-100" onClick={handleLocationClick} />
         </div>
-        <div className='flex w-1/4 items-center justify-center'>
+        <div className='flex w-full md:w-1/4 items-center justify-center'>
             <button className='text-xl text-white font-light' name='metric' onClick={handleUnitsChange}>°C</button>
             <p className='text-xl text-white mx-1'>|</p>
             <button className='text-xl text-white font-light' name='imperial' onClick={handleUnitsChange}>°F</button>

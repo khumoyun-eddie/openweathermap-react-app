@@ -49,7 +49,7 @@ const TemperatureAndDetails = ({weather:{details,icon,temp, temp_min, temp_max, 
           </div>
         </div>
       </div>
-      <div className='flex items-center justify-center space-x-2 text-white text-sm py-3'> 
+      <div className='flex items-center justify-center space-x-1 md:space-x-2 text-white text-xs md:text-sm py-3'> 
           <UilSun />
           <p className='font-light'>
             Rise: <span className='font-medium ml-1'>{formatToLocalTime(sunrise,timezone, 'hh:mm a')}</span>
